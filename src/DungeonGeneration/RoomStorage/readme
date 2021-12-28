@@ -1,0 +1,48 @@
+ROOMSTORAGE RULES:
+
+1DoorRooms are stored in North orientation.
+2DoorRoomsCorner are stored in NorthEast orientation.
+2DoorRoomsOpposite are stored in Vertical orientation.
+3DoorRooms are stored in North orientation.
+4DoorRooms are stored in Omni orientation.
+
+All of the txt files inside the folders must have a number as their name,
+and the randomized values in the RandomizeFileName function in DungeonRoom class 
+MUST BE CHANGED ACCORDING TO THE AMOUNT OF FILES IN EACH FOLDER.
+
+All files MUST have:
+-The correct number of doors in the middle on the sides of the room.
+-Walls on the sides of the room.
+-12 rows and 12 columns.
+-A character signifying a level entrance
+-A character signifying a level exit
+-A character signifying a loot tile
+-At least five characters signifying enemy tiles.
+
+Also note that there should be only up to two consecutive wall/pit tiles inside rooms, not counting the edges of a room in order for the character pathfinding to work.
+
+'#' means a WallTile.
+'*' means a FloorTile.
+'+' means a PitTile.
+'=' means a DoorTile.
+'E' means a EnemyTile.
+'T' means a TrapTile.
+'U' means a LevelEntrance.
+'L' means a LootTile.
+'D' means a LevelExit.
+
+
+Example of a room file stored in 2DoorRoomsCorner:
+
+#####==#####
+#####******#
+#####**##**#
+#####**##**#
+#####*L**E*#
+#####**E***#
+#####**D***#
+#####*E*E**=
+#####**U***=
+#####***E**#
+############
+############
